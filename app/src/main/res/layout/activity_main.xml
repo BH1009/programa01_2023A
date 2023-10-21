@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ibLimpiar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="cerrar"
+    tools:context=".MainActivity"
+    tools:ignore="DuplicateIds"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="32dp">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/programa_de_operaciones_basicas"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvValor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/primer_valor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etValor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toEndOf="@+id/tvValor1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvValor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/segundo_valor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValor1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etValor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toEndOf="@+id/tvValor2"
+        app:layout_constraintTop_toBottomOf="@+id/etValor1"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/botonsumar"
+        android:onClick="sumar"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:srcCompat="@drawable/mas_positivo_suma_simbolo_matematico"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageButton
+        android:id="@+id/ibCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/botoncerrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibResta"
+        app:srcCompat="@drawable/boton"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/botondivide"
+        android:onClick="division"
+        app:layout_constraintStart_toEndOf="@+id/ibMultiplica"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:srcCompat="@drawable/division"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/botonresta"
+        android:onClick="resta"
+        app:layout_constraintStart_toEndOf="@+id/ibSuma"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:srcCompat="@drawable/menos"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibExponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/botonexponente"
+        android:onClick="exponente"
+        app:layout_constraintStart_toEndOf="@+id/ibDivide"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:srcCompat="@drawable/exponente"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibMultiplica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/botonmultiplica"
+        android:onClick="multiplicacion"
+        app:layout_constraintStart_toEndOf="@+id/ibResta"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:srcCompat="@drawable/simbolo_de_multiplicacion"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="92dp"
+        android:contentDescription="@string/botonborrar"
+        android:onClick="borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibExponente"
+        app:srcCompat="@drawable/borrar"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">programa01_2023A</string>
+    <string name="programa_de_operaciones_basicas">Programa de operaciones basicas</string>
+    <string name="primer_valor">Primer valor</string>
+    <string name="segundo_valor">Segundo valor</string>
+    <string name="botonsumar">botonsumar</string>
+    <string name="botonresta">botonresta</string>
+    <string name="botonmultiplica">botonmultiplica</string>
+    <string name="botondivide">botondivide</string>
+    <string name="botonexponente">botonExponente</string>
+    <string name="botonborrar">botonborrar</string>
+    <string name="botoncerrar">botoncerrar</string>
+    <string name="btnRegresar">Regresar</string>
+    <string name="Resultado"></string>
+</resources>
